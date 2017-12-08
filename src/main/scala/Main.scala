@@ -8,4 +8,6 @@ object Main extends App {
     
     val result = try Parser.parseFile(source) finally source.close
     
+    println("Amount: " + result.length)
+    
 }
