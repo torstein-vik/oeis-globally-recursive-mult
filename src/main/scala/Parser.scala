@@ -31,4 +31,6 @@ object Parser extends RegexParsers {
     
     import PolynomialTree._
     
+    def paren : Parser[PolynomialTree] = "(" ~> polynomial0 <~ ")"
+    
 }
