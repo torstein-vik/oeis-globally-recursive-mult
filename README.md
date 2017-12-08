@@ -1,2 +1,2 @@
-# oeis-globally-recursive-mult
-Research project concerning globally recursive multiplicative functions
+# OEIS Globally recursive multiplicative functions
+***A study of all globally recursive multiplicative functions in the OEIS*** <p>
