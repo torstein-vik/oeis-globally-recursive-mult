@@ -6,5 +6,6 @@ object Main extends App {
     
     val source = Source.fromURL(getClass.getResource("/oeis_gf.py"))
     
+    val result = try Parser.parseFile(source) finally source.close
     
 }
