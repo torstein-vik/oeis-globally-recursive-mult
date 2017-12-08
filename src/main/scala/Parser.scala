@@ -16,5 +16,6 @@ object Parser extends RegexParsers {
 
     def formulae : Parser[Seq[(OEIS, Seq[PolynomialTree])]] = (pairwrapped).*
 
+    def pairwrapped : Parser[(OEIS, Seq[PolynomialTree])] = oeiswrapped ~ formulaswrapped ^^ {case x ~ y => (x, y)}
     
 }
