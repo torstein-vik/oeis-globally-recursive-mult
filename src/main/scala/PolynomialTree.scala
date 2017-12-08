@@ -8,6 +8,6 @@ object PolynomialTree {
     case class :+:  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
     case class :-:  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
 
-    case class number(num : Int) extends PolynomialTree
-    case object variable extends PolynomialTree
+    case class Number(num : Int) extends PolynomialTree
+    case object Variable extends PolynomialTree
 }
