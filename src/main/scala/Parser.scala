@@ -25,6 +25,7 @@ object Parser extends RegexParsers {
     def formulas : Parser[Seq[PolynomialTree]] = "[" ~> repsep(polynomial0, ",") <~ "]"
     
     def polynomial0 : Parser[PolynomialTree] = terms | factors | div | pow | variable | number | paren
+    def polynomial1 : Parser[PolynomialTree] = factors | div | pow | variable | number | paren
     
     import PolynomialTree._
     
