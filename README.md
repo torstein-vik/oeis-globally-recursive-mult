@@ -47,3 +47,8 @@ This framework is and will remain completely open source, under the GNU General 
 * Implementation: Scala
 * Build tool: SBT
 
+## Folder structure
+
+* /project/ -- Part of SBT
+
+* /src/main/scala -- Main codebase
