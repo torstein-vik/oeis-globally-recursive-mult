@@ -37,4 +37,9 @@ object Parser extends RegexParsers {
     
     def variable : Parser[Variable.type] = "x" ^^^ Variable
     
+    def terms : Parser[PolynomialTree] = polynomial1 ~ (("+" | "-") ~ polynomial1 ).+ ^^ { case first ~ terms => terms.foldLeft(first){
+        case (acc, "+" ~ x) => acc :+ x 
+        case (acc, "-" ~ x) => acc :- x
+    }}
+    
 }
