@@ -42,4 +42,8 @@ object Parser extends RegexParsers {
         case (acc, "-" ~ x) => acc :- x
     }}
     
+    def factors : Parser[PolynomialTree] = polynomial2 ~ ("*" ~> polynomial2).+ ^^ {case first ~ factors => factors.foldLeft(first){
+        case (acc, x) => acc :* x
+    }}
+    
 }
