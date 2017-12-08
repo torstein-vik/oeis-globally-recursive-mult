@@ -35,4 +35,6 @@ object Parser extends RegexParsers {
     
     def number : Parser[Number] = """\d+""".r ^^ (str => Number(str.toInt))
     
+    def variable : Parser[Variable.type] = "x" ^^^ Variable
+    
 }
