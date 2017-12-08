@@ -24,4 +24,7 @@ object Parser extends RegexParsers {
     def formulaswrapped : Parser[Seq[PolynomialTree]] = "x = SR.var('x')" ~> "return { 'ogf': " ~> formulas <~ "}"
     def formulas : Parser[Seq[PolynomialTree]] = "[" ~> repsep(polynomial0, ",") <~ "]"
     
+    
+    import PolynomialTree._
+    
 }
