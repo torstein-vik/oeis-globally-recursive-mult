@@ -4,6 +4,7 @@ abstract sealed class PolynomialTree {
     import PolynomialTree._
     def :** (exp : Int) = new :**(this, exp)
     def :* (right : PolynomialTree) = new :*(this, right)
+    def :/ (right : PolynomialTree) = new :*(this, right)
     def :+ (right : PolynomialTree) = new :+(this, right)
     def :- (right : PolynomialTree) = new :-(this, right)
 }
@@ -11,6 +12,7 @@ abstract sealed class PolynomialTree {
 object PolynomialTree {
     case class :** (base : PolynomialTree, exp : Int)              extends PolynomialTree
     case class :*  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
+    case class :/  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
     case class :+  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
     case class :-  (left : PolynomialTree, right : PolynomialTree) extends PolynomialTree
 
