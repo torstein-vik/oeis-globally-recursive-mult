@@ -6,6 +6,7 @@ import scala.io.Source
 
 object Parser extends RegexParsers {
     
+    def parseFile (src : Source) = getFormulae(new CharSequenceReader(src.mkString))
     
     def getFormulae (in : Input) : Seq[(OEIS, Recursion)] = parseAll(formulae, in) match {
         case Success(x, _) => x
