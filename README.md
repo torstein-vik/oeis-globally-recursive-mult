@@ -16,3 +16,8 @@
 
 Please tell us if this doesn't work, because that means something is wrong with our instructions.
 
+## Contributors
+
+_Ask Torstein ([torsteinv64@gmail.com](mailto:torsteinv64@gmail.com)) to add you here if you contribute to this project_
+* Torstein Vik
+
