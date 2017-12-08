@@ -52,3 +52,4 @@ This framework is and will remain completely open source, under the GNU General 
 * /project/ -- Part of SBT
 
 * /src/main/scala -- Main codebase
+* /src/main/resources -- Resources for the main codebase
