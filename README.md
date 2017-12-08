@@ -4,7 +4,7 @@
 
 ## Thanks to
 
-1. [Enxhell](https://github.com/eluzhnica), for [OEIS GF Package](https://github.com/eluzhnica/oeis_gf)
+1. [Enxhell Luzhnica](https://github.com/eluzhnica), for [OEIS GF Package](https://github.com/eluzhnica/oeis_gf)
 2. [The OEIS Foundation Inc.](http://oeisf.org/), for [The Online Encyclopedia of Integer Sequences](https://oeis.org/)
 
 ## Installation
