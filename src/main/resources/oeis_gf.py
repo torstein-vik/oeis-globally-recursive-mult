@@ -1,20 +1,3 @@
-# -*- coding: utf-8 -*-
-r"""
-This module provides the ordinary generating functions of
-OEIS sequences.
-
-EXAMPLES ::
-
-    sage: from oeis_gf import *
-    sage: A000029()['ogf']
-    42
-
-AUTHORS:
-    Enxhell Luzhnica
-"""
-
-from sage.all import *
-
 
 def A000008():
     x = SR.var('x')
