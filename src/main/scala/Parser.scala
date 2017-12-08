@@ -14,6 +14,7 @@ object Parser extends RegexParsers {
         case Error(msg, next) => throw new Exception("Error at line " + next.pos.line + " column " + next.pos.column + "\n" + next.pos.longString + "\n" + msg)
     }
 
-    def formulae : Parser[Seq[(OEIS, Recursion)]] = ???
+    def formulae : Parser[Seq[(OEIS, Seq[PolynomialTree])]] = (pairwrapped).*
+
     
 }
