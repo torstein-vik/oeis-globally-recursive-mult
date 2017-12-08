@@ -33,4 +33,6 @@ object Parser extends RegexParsers {
     
     def paren : Parser[PolynomialTree] = "(" ~> polynomial0 <~ ")"
     
+    def number : Parser[Number] = """\d+""".r ^^ (str => Number(str.toInt))
+    
 }
