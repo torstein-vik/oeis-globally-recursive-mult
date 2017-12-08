@@ -22,4 +22,6 @@ object Parser extends RegexParsers {
     def oeis : Parser[OEIS] = """A\d{6}""".r ^^ {str => println(str); OEIS(str)}
     
     def formulaswrapped : Parser[Seq[PolynomialTree]] = "x = SR.var('x')" ~> "return { 'ogf': " ~> formulas <~ "}"
+    def formulas : Parser[Seq[PolynomialTree]] = "[" ~> repsep(polynomial0, ",") <~ "]"
+    
 }
