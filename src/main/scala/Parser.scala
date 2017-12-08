@@ -18,4 +18,5 @@ object Parser extends RegexParsers {
 
     def pairwrapped : Parser[(OEIS, Seq[PolynomialTree])] = oeiswrapped ~ formulaswrapped ^^ {case x ~ y => (x, y)}
     
+    def oeiswrapped : Parser[OEIS] = "def " ~> oeis <~ "():" 
 }
