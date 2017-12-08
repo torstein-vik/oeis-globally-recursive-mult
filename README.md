@@ -42,3 +42,8 @@ This framework is and will remain completely open source, under the GNU General 
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
     
 
+## Languages/Frameworks
+
+* Implementation: Scala
+* Build tool: SBT
+
