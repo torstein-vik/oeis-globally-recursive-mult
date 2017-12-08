@@ -48,4 +48,6 @@ object Parser extends RegexParsers {
     
     def div : Parser[:/] = polynomial2 ~ ("/" ~> polynomial2) ^^ {case left ~ right => left :/ right}
     
+    def pow : Parser[:**] = polynomial3 ~ ("**" ~> number) ^^ {case base ~ Number(exp) => base :** exp}
+    
 }
