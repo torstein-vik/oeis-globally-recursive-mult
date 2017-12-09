@@ -13,4 +13,6 @@ object Main extends App {
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
     
     
+    val source2 = Source.fromURL(getClass.getResource("/oeis_gf.txt"))
+    
 }
