@@ -6,15 +6,15 @@ import scala.io.Source
 
 object Parser extends RegexParsers {
     
-    def parseFile (src : Source) = getFormulae(new CharSequenceReader(src.mkString))
+    def parseFile (formulalist : Set[OEIS])(src : Source) = getFormulae(formulalist)(new CharSequenceReader(src.mkString))
     
-    def getFormulae (in : Input) : Seq[(OEIS, Seq[PolynomialTree])] = parseAll(formulae, in) match {
+    def getFormulae (formulalist : Set[OEIS])(in : Input) : Seq[(OEIS, Option[Seq[PolynomialTree]])] = parseAll(formulae(formulalist), in) match {
         case Success(x, _) => x
         case Failure(msg, next) => throw new Exception("Error at line " + next.pos.line + " column " + next.pos.column + "\n" + next.pos.longString + "\n" + msg)
         case Error(msg, next) => throw new Exception("Error at line " + next.pos.line + " column " + next.pos.column + "\n" + next.pos.longString + "\n" + msg)
     }
 
-    def formulae : Parser[Seq[(OEIS, Seq[PolynomialTree])]] = (pairwrapped).*
+    def formulae(formulalist : Set[OEIS]) : Parser[Seq[(OEIS, Option[Seq[PolynomialTree]])]] = (pairwrapped(formulalist)).*
 
     def pairwrapped(formulalist : Set[OEIS]) : Parser[(OEIS, Option[Seq[PolynomialTree]])] = oeiswrapped >> (oeis => success(oeis) ~
         (if (formulalist.contains(oeis)) formulaswrapped ^^ (Some(_)) else """((?!def)(.|\r?\n))*""".r ^^^ None)) ^^ {case x ~ y => (x, y) }
