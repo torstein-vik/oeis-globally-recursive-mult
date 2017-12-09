@@ -25,6 +25,9 @@ object Multiplicatives {
             println("queries: " + amt)
             
             for (i <- 0 to (amt - 1)) {
+                val result = query(i)
+                
+
                 
                 Thread.sleep(500)
             }
