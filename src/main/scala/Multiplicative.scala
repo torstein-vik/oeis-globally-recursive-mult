@@ -12,11 +12,16 @@ object Multiplicatives {
     
     def apply : collection.immutable.HashSet[OEIS] = {
         if (status == Some(true)) return multiplicatives.to[collection.immutable.HashSet] else if (status == Some(false)){
+            status = None
+            
             val first = query(0)
+                        
+            
             
             val amt : Int = math.ceil((first \\ "count").toFloat / 10)
+            status = Some(true)
             
-            ???
+            return apply()
         } else throw new Exception("Please wait for data to be loaded...")
         
     }
