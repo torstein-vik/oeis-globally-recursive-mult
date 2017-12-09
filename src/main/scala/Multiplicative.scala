@@ -25,6 +25,8 @@ object Multiplicatives {
             println("queries: " + amt)
             
             for (i <- 0 to (amt - 1)) {
+                
+                Thread.sleep(500)
             }
             
             status = Some(true)
