@@ -12,6 +12,8 @@ object Main extends App {
     
     val mults : Set[OEIS] = Multiplicatives.apply
     
+    println("Amount mults: " + mults.size)
+    
     /*
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
     
