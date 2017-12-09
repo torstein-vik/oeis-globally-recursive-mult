@@ -17,8 +17,8 @@ object Multiplicatives {
             status = None
             
             val first = query(0)
-                        
             
+            val count = (first \ "count").extract[Int]
             
             val amt : Int = math.ceil((first \\ "count").toFloat / 10)
             status = Some(true)
