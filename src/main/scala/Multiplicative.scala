@@ -20,5 +20,8 @@ object Multiplicatives {
     def queryurl(i : Int) = "https://oeis.org/search?q=keyword:mult&fmt=json&start=" + (i * 10)
     
     def query (i : Int) : JValue = {
+        val source = Source.fromURL(queryurl(i))("UTF-8")
+        val result = try source.mkString finally source.close
+        
     }
 }
