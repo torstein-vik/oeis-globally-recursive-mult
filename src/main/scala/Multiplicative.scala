@@ -21,6 +21,9 @@ object Multiplicatives {
             val count = (first \ "count").extract[Int]
             val amt = math.ceil(count.toFloat / 10).toInt
             
+            println("count: " + count)
+            println("queries: " + amt)
+            
             
             val amt : Int = math.ceil((first \\ "count").toFloat / 10)
             status = Some(true)
