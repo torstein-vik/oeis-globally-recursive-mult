@@ -16,6 +16,8 @@ object Main extends App {
     
     val intersection = oeis_ids intersect mults
     
+    println("Amount intersection: " + intersection.size)
+    println(intersection)
     /*
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
     
