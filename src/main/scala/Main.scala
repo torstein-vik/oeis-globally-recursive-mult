@@ -10,6 +10,8 @@ object Main extends App {
     
     println("Amount gf: " + oeis_ids.size)
     
+    val mults : Set[OEIS] = Multiplicatives.apply
+    
     /*
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
     
