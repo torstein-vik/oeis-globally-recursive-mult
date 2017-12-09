@@ -2,6 +2,8 @@ package io.github.torsteinvik.oeisgloballyrecursivemult
 
 import scala.io.Source
 
+import org.json4s._
+
 object Multiplicatives {
     import collection.mutable.HashSet
     
