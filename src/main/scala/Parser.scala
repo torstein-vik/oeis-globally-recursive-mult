@@ -16,7 +16,8 @@ object Parser extends RegexParsers {
 
     def formulae : Parser[Seq[(OEIS, Seq[PolynomialTree])]] = (pairwrapped).*
 
-    def pairwrapped : Parser[(OEIS, Seq[PolynomialTree])] = oeiswrapped ~ formulaswrapped ^^ {case x ~ y => (x, y)}
+    def pairwrapped(formulalist : Set[OEIS]) : Parser[(OEIS, Option[Seq[PolynomialTree]])] = oeiswrapped >> (oeis => success(oeis) ~
+        (if (formulalist.contains(oeis)) formulaswrapped ^^ (Some(_)) else """((?!def)(.|\r?\n))*""".r ^^^ None)) ^^ {case x ~ y => (x, y) }
     
     def oeiswrapped : Parser[OEIS] = "def " ~> oeis <~ "():" 
     def oeis : Parser[OEIS] = """A\d{6}""".r ^^ {str => println(str); OEIS(str)}
