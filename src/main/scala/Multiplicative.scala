@@ -25,7 +25,6 @@ object Multiplicatives {
             println("queries: " + amt)
             
             
-            val amt : Int = math.ceil((first \\ "count").toFloat / 10)
             status = Some(true)
             
             return apply()
