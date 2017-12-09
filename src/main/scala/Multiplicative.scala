@@ -27,7 +27,7 @@ object Multiplicatives {
             
             status = Some(true)
             
-            return apply()
+            return apply
         } else throw new Exception("Please wait for data to be loaded...")
         
     }
