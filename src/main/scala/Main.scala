@@ -6,8 +6,8 @@ object Main extends App {
     
     val source = Source.fromURL(getClass.getResource("/oeis_gf.txt"))
     
-    val result = try Parser.parseFile(Set())(source) finally source.close
+    val oeis_ids : Seq[OEIS] = try Parser.parseFile(Set())(source).map(_._1) finally source.close
     
-    println("Amount: " + result.length)
+    println("Amount: " + oeis_ids.length)
     
 }
