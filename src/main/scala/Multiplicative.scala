@@ -8,4 +8,5 @@ object Multiplicatives {
     private var multiplicatives : HashSet[OEIS] = new HashSet()
     
     
+    val query = "https://oeis.org/search?q=keyword:mult&fmt=json"
 }
