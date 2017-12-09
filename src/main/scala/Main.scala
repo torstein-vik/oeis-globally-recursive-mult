@@ -10,6 +10,7 @@ object Main extends App {
     
     println("Amount: " + oeis_ids.length)
     
+    /*
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
     
     
@@ -21,4 +22,5 @@ object Main extends App {
     }  finally source2.close
     
     println(parsed)
+    */
 }
