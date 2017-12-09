@@ -8,7 +8,7 @@ object Main extends App {
     
     val oeis_ids : Set[OEIS] = try Parser.parseFile(Set())(source).map(_._1).toSet finally source.close
     
-    println("Amount: " + oeis_ids.length)
+    println("Amount gf: " + oeis_ids.size)
     
     /*
     val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
