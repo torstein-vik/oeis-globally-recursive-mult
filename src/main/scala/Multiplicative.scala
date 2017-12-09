@@ -28,6 +28,11 @@ object Multiplicatives {
                 val result = query(i)
                 
 
+                for ( results <- (result \ "results").extract[List[JObject]] ) {
+                    val number = (results \ "number").extract[Int]
+                    multiplicatives += OEIS.fromNumber(number)
+                }
+                
                 
                 Thread.sleep(500)
             }
