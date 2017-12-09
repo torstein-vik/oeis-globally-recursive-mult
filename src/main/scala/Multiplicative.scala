@@ -10,6 +10,8 @@ object Multiplicatives {
     private var status : Option[Boolean] = Some(false)
     private var multiplicatives : HashSet[OEIS] = new HashSet()
     
+    private implicit val formats = DefaultFormats
+        
     def apply : collection.immutable.HashSet[OEIS] = {
         if (status == Some(true)) return multiplicatives.to[collection.immutable.HashSet] else if (status == Some(false)){
             status = None
