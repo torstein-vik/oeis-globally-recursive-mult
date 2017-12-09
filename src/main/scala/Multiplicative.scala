@@ -8,6 +8,9 @@ object Multiplicatives {
     private var status : Option[Boolean] = Some(false)
     private var multiplicatives : HashSet[OEIS] = new HashSet()
     
+    def apply : collection.immutable.HashSet[OEIS] = {
+        
+    }
     
     val query = "https://oeis.org/search?q=keyword:mult&fmt=json"
 }
