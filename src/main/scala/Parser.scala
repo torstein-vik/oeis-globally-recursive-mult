@@ -20,7 +20,7 @@ object Parser extends RegexParsers {
         (if (formulalist.contains(oeis)) formulaswrapped ^^ (Some(_)) else """((?!def)(.|\r?\n))*""".r ^^^ None)) ^^ {case x ~ y => (x, y) }
     
     def oeiswrapped : Parser[OEIS] = "def " ~> oeis <~ "():" 
-    def oeis : Parser[OEIS] = """A\d{6}""".r ^^ {str => println(str); OEIS(str)}
+    def oeis : Parser[OEIS] = """A\d{6}""".r ^^ (OEIS(_))
     
     def formulaswrapped : Parser[Seq[PolynomialTree]] = "x = SR.var('x')" ~> "return { 'ogf': " ~> formulas <~ "}"
     def formulas : Parser[Seq[PolynomialTree]] = "[" ~> repsep(polynomial0, ",") <~ "]"
