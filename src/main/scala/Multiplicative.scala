@@ -15,5 +15,5 @@ object Multiplicatives {
         
     }
     
-    val query = "https://oeis.org/search?q=keyword:mult&fmt=json"
+    def queryurl(i : Int) = "https://oeis.org/search?q=keyword:mult&fmt=json&start=" + (i * 10)
 }
