@@ -33,6 +33,7 @@ object Multiplicatives {
                     multiplicatives += OEIS.fromNumber(number)
                 }
                 
+                printf("%d of %d - %2.2f %%\n", math.min((i + 1) * 10, count), count, (math.min((i + 1) * 10, count).toFloat / count) * 100)
                 
                 Thread.sleep(500)
             }
