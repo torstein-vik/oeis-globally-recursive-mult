@@ -23,5 +23,7 @@ object Multiplicatives {
         val source = Source.fromURL(queryurl(i))("UTF-8")
         val result = try source.mkString finally source.close
         
+        import org.json4s.native.JsonMethods._
+        return parse(result)
     }
 }
