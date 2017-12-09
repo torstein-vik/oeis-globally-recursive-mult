@@ -15,4 +15,9 @@ object Main extends App {
     
     val source2 = Source.fromURL(getClass.getResource("/oeis_gf.txt"))
     
+    val parsed : Seq[(OEIS, Seq[PolynomialTree])] = try Parser.parseFile(tobeparsed)(source2).flatMap{
+        case (id, None) => Seq()
+        case (id, Some(rec)) => Seq((id, rec))
+    }  finally source2.close
+    
 }
