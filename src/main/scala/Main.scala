@@ -20,4 +20,5 @@ object Main extends App {
         case (id, Some(rec)) => Seq((id, rec))
     }  finally source2.close
     
+    println(parsed)
 }
