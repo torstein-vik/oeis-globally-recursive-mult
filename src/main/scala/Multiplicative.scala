@@ -24,6 +24,8 @@ object Multiplicatives {
             println("count: " + count)
             println("queries: " + amt)
             
+            for (i <- 0 to (amt - 1)) {
+            }
             
             status = Some(true)
             
