@@ -18,4 +18,7 @@ object Multiplicatives {
     }
     
     def queryurl(i : Int) = "https://oeis.org/search?q=keyword:mult&fmt=json&start=" + (i * 10)
+    
+    def query (i : Int) : JValue = {
+    }
 }
