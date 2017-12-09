@@ -14,3 +14,6 @@ fork := true
 
 // Scala parser combinators
 libraryDependencies += "org.scala-lang.modules" %% "scala-parser-combinators" % "1.0.6"
+
+// Jackson
+libraryDependencies += "org.json4s" %% "json4s-native" % "3.6.0-M1"
