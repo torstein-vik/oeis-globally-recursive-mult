@@ -18,8 +18,8 @@ object Main extends App {
     
     println("Amount intersection: " + intersection.size)
     println(intersection)
-    /*
-    val tobeparsed = Set(OEIS("A257848"), OEIS("A257849"))
+    
+    val tobeparsed = Set(intersection)
     
     
     val source2 = Source.fromURL(getClass.getResource("/oeis_gf.txt"))
@@ -30,5 +30,5 @@ object Main extends App {
     }  finally source2.close
     
     println(parsed)
-    */
+    
 }
