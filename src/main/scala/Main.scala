@@ -19,7 +19,7 @@ object Main extends App {
     println("Amount intersection: " + intersection.size)
     println(intersection)
     
-    val tobeparsed = Set(intersection)
+    val tobeparsed = intersection
     
     
     val source2 = Source.fromURL(getClass.getResource("/oeis_gf.txt"))
